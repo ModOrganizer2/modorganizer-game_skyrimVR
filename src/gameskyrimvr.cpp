@@ -238,6 +238,7 @@ void GameSkyrimVR::initializeProfile(const QDir &path, ProfileSettings settings)
 
     if (settings.testFlag(IPluginGame::CONFIGURATION)) {
         copyToProfile(myGamesPath(), path, "skyrimprefs.ini");
+        copyToProfile(myGamesPath(), path, "skyrimvr.ini");
     }
 }
 
@@ -282,7 +283,7 @@ QString GameSkyrimVR::gameNexusName() const
 
 QStringList GameSkyrimVR::iniFiles() const
 {
-    return{ "skyrimprefs.ini" };
+    return{ "skyrimprefs.ini", "skyrimvr.ini" };
 }
 
 QStringList GameSkyrimVR::DLCPlugins() const
