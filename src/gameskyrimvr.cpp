@@ -92,9 +92,9 @@ QList<ExecutableInfo> GameSkyrimVR::executables() const
   return QList<ExecutableInfo>()
     << ExecutableInfo("SKSE", findInGameFolder(feature<ScriptExtender>()->loaderName()))
     << ExecutableInfo("Skyrim VR", findInGameFolder(binaryName()))
+    << ExecutableInfo("Skyrim Launcher", findInGameFolder(getLauncherName()))
     << ExecutableInfo("Creation Kit", findInGameFolder("CreationKit.exe"))
-    << ExecutableInfo("LOOT", QFileInfo(getLootPath())).withArgument("--game=\"Skyrim VR\"")
-    ;
+    << ExecutableInfo("LOOT", QFileInfo(getLootPath())).withArgument("--game=\"Skyrim VR\"");
 }
 
 QList<ExecutableForcedLoadSetting> GameSkyrimVR::executableForcedLoads() const
