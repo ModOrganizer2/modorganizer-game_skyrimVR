@@ -134,7 +134,10 @@ MOBase::VersionInfo GameSkyrimVR::version() const
 
 QList<PluginSetting> GameSkyrimVR::settings() const
 {
-  return {}; //Must return something, otherwise linker errors smh
+    return QList<PluginSetting>() << PluginSetting(
+        "enderal_downloads",
+        tr("Allow Enderal and EnderalSE downloads."),
+        true);
 }
 
 void GameSkyrimVR::initializeProfile(const QDir &path, ProfileSettings settings) const
