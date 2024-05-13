@@ -201,7 +201,7 @@ QStringList GameSkyrimVR::primarySources() const
 
 QStringList GameSkyrimVR::validShortNames() const
 {
-  QStringList shortNames{ "Skyrim", "SkyrimSE" };
+QStringList shortNames{ "Skyrim", "SkyrimSE", "Enderal", "EnderalSE" };
   return shortNames;
 }
 
