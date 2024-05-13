@@ -134,9 +134,7 @@ MOBase::VersionInfo GameSkyrimVR::version() const
 
 QList<PluginSetting> GameSkyrimVR::settings() const
 {
-  return {
-    PluginSetting("enderal_downloads", "allow Enderal and Enderal SE downloads", QVariant(false))
-  };
+  return {}; //Must return something, otherwise linker errors smh
 }
 
 void GameSkyrimVR::initializeProfile(const QDir &path, ProfileSettings settings) const
@@ -204,9 +202,6 @@ QStringList GameSkyrimVR::primarySources() const
 QStringList GameSkyrimVR::validShortNames() const
 {
   QStringList shortNames{ "Skyrim", "SkyrimSE" };
-  if (m_Organizer->pluginSetting(name(), "enderal_downloads").toBool()) {
-    shortNames.append({ "Enderal", "EnderalSE" });
-  }
   return shortNames;
 }
 
