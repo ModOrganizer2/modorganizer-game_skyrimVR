@@ -29,4 +29,4 @@ protected:
     }
 };
 
-#endif  // SKYRIMVR_MODATACHECKER_H
+#endif // SKYRIMVR_MODATACHECKER_H
